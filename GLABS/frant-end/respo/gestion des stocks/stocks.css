@@ -1,0 +1,171 @@
+*{
+    padding :0;
+    margin : 0;
+    color:white;
+    font-family: sans-serif;
+}
+body {
+    background-color: #001;
+    display: flex;
+}
+.img-box{
+    width: 50px;
+    height: 50px;  
+    border-radius: 50%;
+    overflow: hidden; 
+    border: 3px solid white;
+    min-width: 50px;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+.profile h2{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.img-box img{
+    width: 100%;  
+}
+.menu {
+    background-color: #123;
+    width: 50px;
+    height: 100vh;
+    padding:20px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.menu:hover{
+    width: 260px;
+}
+ul{
+    list-style: none;
+    position : relative;
+    height: 95%;
+}
+ul li a {
+    display :block;
+    text-decoration:none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap:40px;
+    transition: 0.5s;
+    
+}
+
+ul li a:hover, .active{
+    background-color: #ffffff55;
+}
+.log-out{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.log-out a{
+    background-color: red;
+    overflow: hidden;
+} 
+ul li a i {
+    font-size: 30px;
+}
+.section{
+    width: 100%;
+    flex: 1;
+    overflow: hidden;    
+}
+.scrollable-content {
+  height: 100vh;
+  overflow-y: auto; 
+  padding: 20px;
+
+}
+fieldset{
+    max-width: 2000px;
+    background-color: #123;
+    border-radius:20px ;
+    border-style:none ;
+    padding: 40px;
+}
+        .cruds{
+            margin: auto;
+        }
+        .head{
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase ;
+        }
+        .section p{
+            font-size: 22px;
+        }
+        .btn{
+            width: 100%;
+            height: 50px;
+            background-color: #5d00ff;
+            margin-top: 4px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.5s;
+            font-size: 18px;
+        }
+        .btn:hover{
+            background: rgb(98, 4, 4);
+            letter-spacing: 1px;
+        }
+        input{
+            width: 100%;
+            height: 35px;
+            background-color:#ffffff ;
+            border-radius: 10px 0;
+            border: none;
+            outline: none;
+            margin: 4px;
+            padding: 4px;
+            color: #000000;
+            margin: 10px;
+        }
+        input:focus{
+            background: rgb(0, 145, 255);
+            transform: scale(1.01);
+        }
+        .price{
+            margin-left: 0px;
+        }
+        .price input{
+            width: 20%;   
+        }
+        #total{
+            background: #dc3545;
+            padding: 4px 2px;
+        }
+        #total::before{
+            content: 'Total : ';
+        }
+        #Search{
+            margin-top: 10px;
+        }
+        .btnSearch{
+            display: flex;
+            justify-content: space-between;
+        }
+        .btnSearch button{
+            width: 45%;
+        }
+        .section table{
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .section table th{
+            text-transform: uppercase;
+        }
+        .section th,.section td{
+            padding: 5px;
+        }
+
+
+

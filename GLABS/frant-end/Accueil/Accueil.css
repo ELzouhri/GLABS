@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    font-family: 'Ubunto',sans-serif;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color:#00eaff;
+    height: 2000px;
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    background-image: 
+     linear-gradient(to right ,rgb(179, 0, 255) ,rgb(0, 94, 255) 30%,rgba(0, 255, 85, 0.495)),
+    url("media_Accueil/Blog_Visuel_SGL.webp")
+    ;
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    height: 640px;
+    margin:50px;
+}
+.container:hover {
+    background-image: 
+    linear-gradient(to right ,rgb(179, 0, 255) ,rgba(0, 94, 255, 0.653) 30%,rgba(0, 255, 85, 0.095)),
+    url("media_Accueil/Blog_Visuel_SGL.webp")
+    ;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px ;
+}
+.logo{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+ul{
+    width: 60%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+ul a{
+    border-bottom: 2px solid transparent;
+}
+ul a:hover{
+    border-bottom-color: white;/*<<<<<<<*/
+}
+.content{
+    color: rgb(255, 255, 255);
+    width: 50%;
+    margin-top: 50px;
+    padding: 30px;
+}
+.content h2{
+    font-size: 100px;
+    text-transform: uppercase;
+}
+.content p{
+    margin-bottom: 30px;
+}
+.container h2{
+    letter-spacing: 3px;
+    width: 400px;/*<<<<<<<<<<<<<*/
+    padding: 20px 0;
+}
+.content button{
+    font-size: 30px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.content button:hover{
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
+    .feature-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 40px;
+      background-color: rgb(0, 234, 255);
+      gap: 50px;
+      height: 400px;
+    }
+    
+
+    .feature-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      /*box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);*/
+      max-height: 400px;
+    }
+
+    .feature-content {
+      max-width: 500px;
+    }
+
+    .feature-title {
+      font-size: 28px;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+
+    .feature-description {
+      font-size: 16px;
+      color: #2c2c2c;
+      line-height: 1.6;
+    }
+    footer {
+            width: 100%;
+            background-color: #123;
+            padding: 25px;
+            text-align: center;
+            color: #ccc;
+            position: absolute;
+            top:3000px;
+    }
