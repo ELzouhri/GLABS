@@ -125,5 +125,6 @@
             
         </div>
     </div>
+    <script src="stocks.js"></script>
 </body>
 </html>
