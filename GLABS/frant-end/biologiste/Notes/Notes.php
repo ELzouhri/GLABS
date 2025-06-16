@@ -47,7 +47,7 @@
                 </a>
             </li>
             <li class="log-out">
-                <a href="http://localhost/GLABS/frant-end/Accueil/Accueil.css">
+                <a href="http://localhost/GLABS/frant-end/Accueil/Accueil.html">
                     <i class="material-icons">logout</i>
                     <p>log out</p>
                 </a>
