@@ -45,40 +45,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                 <div class="img-box">
                     <img src="../media biologiste/bio.png" alt="image de profile" >
                 </div>
-                <h2>Responsable</h2>
+                <h2>Biologiste</h2>
             </li>
-            <li>
-                <a href="http://localhost/GLABS/frant-end/respo/gestion%20des%20statistiques/statistiques.php">
-                    <i class="material-icons">bar_chart</i>
-                    <p>statistiques</p>
+  <li>
+                <a href="http://localhost/GLABS/frant-end/biologiste/gestion%20des%20analyses/Analyse.php">
+                    <i class="material-icons">description </i>
+                    <p>analyses</p>
                 </a>
             </li>
             <li>
-                <a href="http://localhost/GLABS/frant-end/respo/gestion%20des%20stocks/stocks.php">
-                    <i class="material-icons">local_shipping</i>
-                    <p>stocks</p>
+                <a href="http://localhost/GLABS/frant-end/biologiste/gestion%20des%20patients/patient.php">
+                    <i class="material-icons">personal_injury</i>
+                    <p>patients</p>
+                </a>
+            </li>
+             <li>
+                <a href="http://localhost/GLABS/frant-end/biologiste/Notes/Notes.php">
+                    <i class="material-icons">note_alt</i>
+                    <p>Notes</p>
                 </a>
             </li>
             <li>
-                <a href="http://localhost/GLABS/frant-end/respo/gestion%20des%20utilisateurs/utilisateurs.php">
-                    <i class="material-icons">person</i>
-                    <p>utilisateurs</p>
+                <a href="http://localhost/GLABS/frant-end/biologiste/gestion%20des%20echontillons/Echontillons.php">
+                    <i class="material-icons">science</i>
+                    <p>échantillons</p>
                 </a>
             </li>
             <li>
-                <a href="http://localhost/GLABS/frant-end/respo/gestion%20des%20biologistes/biologistes.php">
-                    <i class="material-icons">biotech</i>
-                    <p>biologistes</p>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost/GLABS/frant-end/respo/gestion%20des%20RDV/RDV.php">
-                    <i class="material-icons">event</i>
-                    <p>Rendez_vous</p>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost/GLABS/frant-end/respo/communication/communication.php">
+                <a href="http://localhost/GLABS/frant-end/biologiste/communication/communication.php">
                     <i class="material-icons">chat</i>
                     <p>communication</p>
                 </a>
@@ -91,6 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
             </li>
         </ul>
     </div>
+   
    
     <div class="section">
         <div class="chat-container">
