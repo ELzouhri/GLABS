@@ -1,3 +1,33 @@
+<?php 
+// Connexion à la base de données
+try {
+    $con = new PDO("mysql:host=localhost;dbname=glabs", "root", "");
+    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    die("Erreur de connexion: " . $e->getMessage());
+}
+
+// Traitement du formulaire
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
+    $n = trim($_POST['username']);
+    $m = trim($_POST['message']);
+
+    if (!empty($n) && !empty($m)) {
+        // Préparer la requête sécurisée
+        $insert = $con->prepare("INSERT INTO chat (name, msg) VALUES (:name, :msg)");
+        $insert->execute([
+            ':name' => $n,
+            ':msg' => $m
+        ]);
+
+        header('Location: communication.php');
+        exit();
+    }
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,21 +92,30 @@
         </ul>
     </div>
    
-<div class="section">
+    <div class="section">
+        <div class="chat-container">
+            <?php
+            $select = $con->prepare("SELECT * FROM chat ORDER BY id DESC");
+            $select->execute();
+            foreach ($select as $res) {
+                echo '<div class="right message">';
+                echo '<strong>' . htmlspecialchars($res['name']) . '</strong><br>';
+                echo htmlspecialchars($res['msg']) . '<br>';
+                echo '<small>' . $res['date'] . '</small>';
+                echo '</div>';
+            }
+            ?>
+        </div>
 
-  <div class="chat-container" >
-    <div class="right"><strong>${msg.username}</strong><br>${msg.text}<br><small>${formatTime(msg.time)}</small></div>
-  </div>
-
-  <div class="input-container">
-    <form action="">
-     <input type="text" id="username" placeholder="Nom d'utilisateur" />
-     <input type="text" id="message" placeholder="Écrivez votre message..." />
-     <button onclick="sendMessage()">📩Envoier</button>
-    </form>
-  </div>
-
+        <div class="input-container">
+            <form action="communication.php" method="POST">
+                <input type="text" id="username" name="username" placeholder="Nom d'utilisateur" required />
+                <input type="text" id="message" name="message" placeholder="Écrivez votre message..." required />
+                <button type="submit" name="submit">📩 Envoyer</button>
+            </form>
+        </div>
     </div>
+
     <script src="communication.js"></script>
 </body>
 </html>
