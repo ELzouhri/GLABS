@@ -1,4 +1,10 @@
+let price = document.getElementById('price');
+let taxes = document.getElementById('taxes');
+let ads = document.getElementById('ads');
+let discount = document.getElementById('discount');
 let total = document.getElementById('total');
+
+
 function getTotal()
 {
     if(price.value != ''){
@@ -10,4 +16,3 @@ function getTotal()
         total.style.background = '#dc3545' ;
     }
 }
-
